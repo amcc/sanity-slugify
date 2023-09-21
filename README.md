@@ -7,3 +7,5 @@ Make notes with sanity
 Auto slugify with the title
 
 see "actions/slugOnSave.js"
+
+the action is registerd in "sanity.config.js"
