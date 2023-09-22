@@ -3,6 +3,7 @@ import {useDocumentOperation} from 'sanity'
 
 export function slugOnSave(originalPublishAction) {
   const BetterAction = (props) => {
+    // use the hook to get access to the patch function with the current document
     const {patch} = useDocumentOperation(props.id, props.type)
     const patchSlug = (slugValue) => {
       patch.execute([{set: {slug: {current: slugValue, _type: 'slug'}}}])
